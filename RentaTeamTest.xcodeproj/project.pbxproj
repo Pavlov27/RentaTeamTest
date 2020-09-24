@@ -3,27 +3,45 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		8FBE274B2514B4130002AAC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBE274A2514B4130002AAC3 /* AppDelegate.swift */; };
 		8FBE274D2514B4130002AAC3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBE274C2514B4130002AAC3 /* SceneDelegate.swift */; };
-		8FBE274F2514B4130002AAC3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBE274E2514B4130002AAC3 /* ViewController.swift */; };
+		8FBE274F2514B4130002AAC3 /* InfinityScrollController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBE274E2514B4130002AAC3 /* InfinityScrollController.swift */; };
 		8FBE27522514B4130002AAC3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FBE27502514B4130002AAC3 /* Main.storyboard */; };
 		8FBE27542514B4140002AAC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FBE27532514B4140002AAC3 /* Assets.xcassets */; };
 		8FBE27572514B4140002AAC3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FBE27552514B4140002AAC3 /* LaunchScreen.storyboard */; };
+		8FBE275F2514BA460002AAC3 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBE275E2514BA460002AAC3 /* CustomCell.swift */; };
+		8FBE27632514C1050002AAC3 /* ChosenImageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBE27622514C1050002AAC3 /* ChosenImageController.swift */; };
+		8FBE27652514C46A0002AAC3 /* ImageScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBE27642514C46A0002AAC3 /* ImageScrollView.swift */; };
+		8FBE27692514D27F0002AAC3 /* InfinityScrollViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBE27682514D27F0002AAC3 /* InfinityScrollViewModel.swift */; };
+		8FBE276B2514DB390002AAC3 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBE276A2514DB390002AAC3 /* NetworkManager.swift */; };
+		8FBE276D2514DBDB0002AAC3 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBE276C2514DBDB0002AAC3 /* API.swift */; };
+		8FBE277025179B690002AAC3 /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBE276F25179B690002AAC3 /* ImageModel.swift */; };
+		E268BDCB21888100B682678E /* Pods_RentaTeamTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBD22B768C8C79B8678C217D /* Pods_RentaTeamTest.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0F246DCC13434121B83C1045 /* Pods-RentaTeamTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RentaTeamTest.debug.xcconfig"; path = "Target Support Files/Pods-RentaTeamTest/Pods-RentaTeamTest.debug.xcconfig"; sourceTree = "<group>"; };
+		8E64FEE4749634F749237E05 /* Pods-RentaTeamTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RentaTeamTest.release.xcconfig"; path = "Target Support Files/Pods-RentaTeamTest/Pods-RentaTeamTest.release.xcconfig"; sourceTree = "<group>"; };
 		8FBE27472514B4130002AAC3 /* RentaTeamTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RentaTeamTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FBE274A2514B4130002AAC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8FBE274C2514B4130002AAC3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8FBE274E2514B4130002AAC3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8FBE274E2514B4130002AAC3 /* InfinityScrollController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfinityScrollController.swift; sourceTree = "<group>"; };
 		8FBE27512514B4130002AAC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8FBE27532514B4140002AAC3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8FBE27562514B4140002AAC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8FBE27582514B4140002AAC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8FBE275E2514BA460002AAC3 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		8FBE27622514C1050002AAC3 /* ChosenImageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChosenImageController.swift; sourceTree = "<group>"; };
+		8FBE27642514C46A0002AAC3 /* ImageScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageScrollView.swift; sourceTree = "<group>"; };
+		8FBE27682514D27F0002AAC3 /* InfinityScrollViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfinityScrollViewModel.swift; sourceTree = "<group>"; };
+		8FBE276A2514DB390002AAC3 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		8FBE276C2514DBDB0002AAC3 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		8FBE276F25179B690002AAC3 /* ImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
+		EBD22B768C8C79B8678C217D /* Pods_RentaTeamTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RentaTeamTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +49,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E268BDCB21888100B682678E /* Pods_RentaTeamTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1429DDDD5182F3EF40CE2FB5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0F246DCC13434121B83C1045 /* Pods-RentaTeamTest.debug.xcconfig */,
+				8E64FEE4749634F749237E05 /* Pods-RentaTeamTest.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		5A3B2E38CD6E95CC85A9D002 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EBD22B768C8C79B8678C217D /* Pods_RentaTeamTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8FBE273E2514B4130002AAC3 = {
 			isa = PBXGroup;
 			children = (
 				8FBE27492514B4130002AAC3 /* RentaTeamTest */,
 				8FBE27482514B4130002AAC3 /* Products */,
+				1429DDDD5182F3EF40CE2FB5 /* Pods */,
+				5A3B2E38CD6E95CC85A9D002 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,13 +96,52 @@
 			children = (
 				8FBE274A2514B4130002AAC3 /* AppDelegate.swift */,
 				8FBE274C2514B4130002AAC3 /* SceneDelegate.swift */,
-				8FBE274E2514B4130002AAC3 /* ViewController.swift */,
+				8FBE277125179B760002AAC3 /* Model */,
+				8FBE276E2517933E0002AAC3 /* Networking */,
+				8FBE27672514C8FF0002AAC3 /* Infinity Scroll Controller */,
+				8FBE27662514C8D40002AAC3 /* Chosen Image Controller */,
 				8FBE27502514B4130002AAC3 /* Main.storyboard */,
 				8FBE27532514B4140002AAC3 /* Assets.xcassets */,
 				8FBE27552514B4140002AAC3 /* LaunchScreen.storyboard */,
 				8FBE27582514B4140002AAC3 /* Info.plist */,
 			);
 			path = RentaTeamTest;
+			sourceTree = "<group>";
+		};
+		8FBE27662514C8D40002AAC3 /* Chosen Image Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8FBE27622514C1050002AAC3 /* ChosenImageController.swift */,
+				8FBE27642514C46A0002AAC3 /* ImageScrollView.swift */,
+			);
+			path = "Chosen Image Controller";
+			sourceTree = "<group>";
+		};
+		8FBE27672514C8FF0002AAC3 /* Infinity Scroll Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8FBE275E2514BA460002AAC3 /* CustomCell.swift */,
+				8FBE274E2514B4130002AAC3 /* InfinityScrollController.swift */,
+				8FBE27682514D27F0002AAC3 /* InfinityScrollViewModel.swift */,
+			);
+			path = "Infinity Scroll Controller";
+			sourceTree = "<group>";
+		};
+		8FBE276E2517933E0002AAC3 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				8FBE276C2514DBDB0002AAC3 /* API.swift */,
+				8FBE276A2514DB390002AAC3 /* NetworkManager.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		8FBE277125179B760002AAC3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8FBE276F25179B690002AAC3 /* ImageModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +151,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8FBE275B2514B4140002AAC3 /* Build configuration list for PBXNativeTarget "RentaTeamTest" */;
 			buildPhases = (
+				A675461266B43028EA906E9D /* [CP] Check Pods Manifest.lock */,
 				8FBE27432514B4130002AAC3 /* Sources */,
 				8FBE27442514B4130002AAC3 /* Frameworks */,
 				8FBE27452514B4130002AAC3 /* Resources */,
+				DA63B3FBE31F824A48B57058 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,13 +212,62 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		A675461266B43028EA906E9D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RentaTeamTest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DA63B3FBE31F824A48B57058 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RentaTeamTest/Pods-RentaTeamTest-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RentaTeamTest/Pods-RentaTeamTest-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RentaTeamTest/Pods-RentaTeamTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8FBE27432514B4130002AAC3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8FBE274F2514B4130002AAC3 /* ViewController.swift in Sources */,
+				8FBE274F2514B4130002AAC3 /* InfinityScrollController.swift in Sources */,
+				8FBE277025179B690002AAC3 /* ImageModel.swift in Sources */,
+				8FBE27652514C46A0002AAC3 /* ImageScrollView.swift in Sources */,
+				8FBE27692514D27F0002AAC3 /* InfinityScrollViewModel.swift in Sources */,
+				8FBE27632514C1050002AAC3 /* ChosenImageController.swift in Sources */,
+				8FBE276B2514DB390002AAC3 /* NetworkManager.swift in Sources */,
 				8FBE274B2514B4130002AAC3 /* AppDelegate.swift in Sources */,
+				8FBE275F2514BA460002AAC3 /* CustomCell.swift in Sources */,
+				8FBE276D2514DBDB0002AAC3 /* API.swift in Sources */,
 				8FBE274D2514B4130002AAC3 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,11 +410,13 @@
 		};
 		8FBE275C2514B4140002AAC3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F246DCC13434121B83C1045 /* Pods-RentaTeamTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HKBXS9NLBT;
 				INFOPLIST_FILE = RentaTeamTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -300,11 +430,13 @@
 		};
 		8FBE275D2514B4140002AAC3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E64FEE4749634F749237E05 /* Pods-RentaTeamTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HKBXS9NLBT;
 				INFOPLIST_FILE = RentaTeamTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
