@@ -20,6 +20,8 @@
 		8FBE276B2514DB390002AAC3 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBE276A2514DB390002AAC3 /* NetworkManager.swift */; };
 		8FBE276D2514DBDB0002AAC3 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBE276C2514DBDB0002AAC3 /* API.swift */; };
 		8FBE277025179B690002AAC3 /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBE276F25179B690002AAC3 /* ImageModel.swift */; };
+		8FFB72F62526138E00394B98 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFB72F52526138E00394B98 /* StorageManager.swift */; };
+		8FFB72F9252614A400394B98 /* DataRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFB72F8252614A400394B98 /* DataRealm.swift */; };
 		E268BDCB21888100B682678E /* Pods_RentaTeamTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBD22B768C8C79B8678C217D /* Pods_RentaTeamTest.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +43,8 @@
 		8FBE276A2514DB390002AAC3 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		8FBE276C2514DBDB0002AAC3 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		8FBE276F25179B690002AAC3 /* ImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
+		8FFB72F52526138E00394B98 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		8FFB72F8252614A400394B98 /* DataRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRealm.swift; sourceTree = "<group>"; };
 		EBD22B768C8C79B8678C217D /* Pods_RentaTeamTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RentaTeamTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -97,6 +101,7 @@
 				8FBE274A2514B4130002AAC3 /* AppDelegate.swift */,
 				8FBE274C2514B4130002AAC3 /* SceneDelegate.swift */,
 				8FBE277125179B760002AAC3 /* Model */,
+				8FFB72F4252612D700394B98 /* Storage */,
 				8FBE276E2517933E0002AAC3 /* Networking */,
 				8FBE27672514C8FF0002AAC3 /* Infinity Scroll Controller */,
 				8FBE27662514C8D40002AAC3 /* Chosen Image Controller */,
@@ -142,6 +147,23 @@
 				8FBE276F25179B690002AAC3 /* ImageModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		8FFB72F4252612D700394B98 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				8FFB72F72526148F00394B98 /* Object */,
+				8FFB72F52526138E00394B98 /* StorageManager.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		8FFB72F72526148F00394B98 /* Object */ = {
+			isa = PBXGroup;
+			children = (
+				8FFB72F8252614A400394B98 /* DataRealm.swift */,
+			);
+			path = Object;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,7 +282,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8FBE274F2514B4130002AAC3 /* InfinityScrollController.swift in Sources */,
+				8FFB72F9252614A400394B98 /* DataRealm.swift in Sources */,
 				8FBE277025179B690002AAC3 /* ImageModel.swift in Sources */,
+				8FFB72F62526138E00394B98 /* StorageManager.swift in Sources */,
 				8FBE27652514C46A0002AAC3 /* ImageScrollView.swift in Sources */,
 				8FBE27692514D27F0002AAC3 /* InfinityScrollViewModel.swift in Sources */,
 				8FBE27632514C1050002AAC3 /* ChosenImageController.swift in Sources */,
@@ -416,7 +440,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HKBXS9NLBT;
 				INFOPLIST_FILE = RentaTeamTest/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -436,7 +460,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HKBXS9NLBT;
 				INFOPLIST_FILE = RentaTeamTest/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

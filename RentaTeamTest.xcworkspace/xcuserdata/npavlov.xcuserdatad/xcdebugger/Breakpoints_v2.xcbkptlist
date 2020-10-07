@@ -14,9 +14,89 @@
             filePath = "RentaTeamTest/Chosen Image Controller/ChosenImageController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
             landmarkName = "sendChosenPhoto(_:_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7115DEE8-9FB8-45F9-9062-FD60412C0FC1"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RentaTeamTest/Infinity Scroll Controller/InfinityScrollController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
+            landmarkName = "loadMoreFlickrImages()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F69AC930-6656-49E4-9323-E1F0132FA177"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RentaTeamTest/Infinity Scroll Controller/InfinityScrollController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
+            landmarkName = "loadMoreFlickrImages()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "F69AC930-6656-49E4-9323-E1F0132FA177 - b8074efeb65e10bf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Array&lt;RentaTeamTest.FlickrImage&gt;&gt;) -&gt; () in RentaTeamTest.InfinityScrollController.(loadMoreFlickrImages in _7FCA4FCFD966CCF5A2B646C31EDE5943)() -&gt; ()"
+                  moduleName = "RentaTeamTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/npavlov/Desktop/RentaTeamTest/RentaTeamTest/Infinity%20Scroll%20Controller/InfinityScrollController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "85"
+                  endingLineNumber = "85"
+                  offsetFromSymbolStart = "802">
+               </Location>
+               <Location
+                  uuid = "F69AC930-6656-49E4-9323-E1F0132FA177 - b7f031b012d0c33b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in closure #1 (Swift.Optional&lt;Swift.Array&lt;RentaTeamTest.FlickrImage&gt;&gt;) -&gt; () in RentaTeamTest.InfinityScrollController.(loadMoreFlickrImages in _7FCA4FCFD966CCF5A2B646C31EDE5943)() -&gt; ()"
+                  moduleName = "RentaTeamTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/npavlov/Desktop/RentaTeamTest/RentaTeamTest/Infinity%20Scroll%20Controller/InfinityScrollController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "81"
+                  endingLineNumber = "81"
+                  offsetFromSymbolStart = "46">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "71C3870D-B4A2-4D15-A193-16A199C0ABC2"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RentaTeamTest/Infinity Scroll Controller/InfinityScrollController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
+            landmarkName = "loadMoreFlickrImages()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

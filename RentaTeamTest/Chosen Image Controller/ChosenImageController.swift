@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class ChosenImageController: UIViewController, ChosenImageDelegate {
 
@@ -18,26 +19,25 @@ class ChosenImageController: UIViewController, ChosenImageDelegate {
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
-    private var image = UIImage()
     private var imageScrollView: ImageScrollView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .black
         imageScrollView = ImageScrollView(frame: view.bounds)
-        view.addSubview(imageScrollView)
-        setupImageScrollView()
         setupInfoLabel()
-        setupCloseButton()
-
-        self.imageScrollView.set(image: image)
     }
+
     private func setupImageScrollView() {
+        view.addSubview(imageScrollView)
+
         imageScrollView.translatesAutoresizingMaskIntoConstraints = false
         imageScrollView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
         imageScrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
         imageScrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
         imageScrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+
+        setupCloseButton()
     }
 
     private func setupInfoLabel(){
@@ -58,9 +58,22 @@ class ChosenImageController: UIViewController, ChosenImageDelegate {
         closeButton.bottomAnchor.constraint(equalTo: view.topAnchor, constant: 100).isActive = true
     }
 
-    func sendChosenPhoto(_ chosenImage: UIImage, _ downloadingData: String) {
-        self.image = chosenImage
+    func sendChosenPhoto(_ imageURL: String, _ downloadingData: String) {
+
+        if let imageURL = URL(string: imageURL) {
+        //оставить тут, не вынося в модель? На подобии с CustomCell?
+            KingfisherManager.shared.retrieveImage(with: imageURL as Resource, options: nil, progressBlock: nil, completionHandler: { [weak self] image, error, cacheType, imageURL in
+            if let image = image {
+                self?.setupImageScrollView()
+                self?.imageScrollView.set(image: image)
+            } else {
+                self?.setupImageScrollView()
+                self?.imageScrollView.set(image: UIImage(named: "noConnectionDummy") ?? UIImage())
+            }
+        })
+
         self.imageInfoLabel.text = downloadingData
+    }
     }
 
     @objc func closeButtonTapped() {

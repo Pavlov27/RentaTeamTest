@@ -7,26 +7,60 @@
 //
 
 import UIKit
-import SwiftyJSON
+import Network
+import RealmSwift
+//import SwiftyJSON
 
 class InfinityScrollViewModel {
+    
+    var apiParameterPageNumber = 1
 
     let networking = NetworkManager()
-
-    func getRandomImages(completion: @escaping (_ images: [FlickrImage]?) -> ()) {
-        networking.fetchFlickrPhotos { (flickrData) in
-
-            let flickrImagesJSON = flickrData?["photos"]["photo"]
-            let flickrImages = flickrImagesJSON?.arrayValue.compactMap {
-                FlickrImage(json: $0)
-            }
-            completion(flickrImages)
-        }
-    }
     
-    func loadImageFromURL(url: String, completion: @escaping (_ images: UIImage?) -> ()) {
-        networking.loadImage(url: url) { image in
-            completion(image)
+    var weConnected = true
+
+    func getRandomImages(completion: @escaping (_ images: [FlickrPhotoRealm]?) -> ()) {
+        
+        let monitor = NWPathMonitor()
+        
+        monitor.pathUpdateHandler = { path in
+            if path.status == .satisfied {
+                print("We're connected!")
+                self.weConnected = true
+            } else {
+                print("No connection.")
+                self.weConnected = false
+            }
+
+            
+            print(path.isExpensive)
+        }
+        
+        let queue = DispatchQueue(label: "Monitor")
+        monitor.start(queue: queue)
+
+        if weConnected {
+            networking.fetchFlickrPhotos { (flickrData) in
+
+//            let flickrImages = flickrData?.photos?.photo
+            //let flickrImages = flickrData
+                completion(flickrData)
+            }
+        } else {
+            let realm = try! Realm()
+            
+            func checkPageExist(page: Int) -> Bool {
+                return realm.object(ofType: FlickrAPIPage.self, forPrimaryKey: page) != nil
+            }
+            
+            if checkPageExist(page: self.apiParameterPageNumber - 1) {
+
+                if let oldData = realm.object(ofType: FlickrAPIPage.self, forPrimaryKey: self.apiParameterPageNumber - 1) {
+                    
+                    let array = Array(oldData.flickrPhotos)
+                    completion(array)
+                }
         }
     }
+}
 }

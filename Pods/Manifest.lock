@@ -3,24 +3,34 @@ PODS:
   - Kingfisher (5.15.1):
     - Kingfisher/Core (= 5.15.1)
   - Kingfisher/Core (5.15.1)
+  - Realm (4.4.1):
+    - Realm/Headers (= 4.4.1)
+  - Realm/Headers (4.4.1)
+  - RealmSwift (4.4.1):
+    - Realm (= 4.4.1)
   - SwiftyJSON (5.0.0)
 
 DEPENDENCIES:
   - Alamofire
   - Kingfisher
+  - RealmSwift
   - SwiftyJSON
 
 SPEC REPOS:
   trunk:
     - Alamofire
     - Kingfisher
+    - Realm
+    - RealmSwift
     - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: 814429acc853c6c54ff123fc3d2ef66803823ce0
   Kingfisher: 3260a05e78a17fdbeb2f14dd8e66ffc768491231
+  Realm: 4eb04d7487bd43c0581256f40b424eafb711deff
+  RealmSwift: 3eb8924ff7100df5928c7602f71d0fec51e7c9c5
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: 3a113f97078c1a7bcb6505c81fdadc9fc196e4e1
+PODFILE CHECKSUM: f138776f87bd2b6ee05404e8d1efaaf08ace8413
 
 COCOAPODS: 1.9.1

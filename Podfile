@@ -10,5 +10,7 @@ target 'RentaTeamTest' do
   pod 'Alamofire'
   pod 'Kingfisher'
   pod 'SwiftyJSON'
+  pod 'RealmSwift'
+  pod 'Networking', :path => "/Users/npavlov/Desktop/XCODEP/RentaTeamTest/RentaTeamTest/Networking"
 
 end

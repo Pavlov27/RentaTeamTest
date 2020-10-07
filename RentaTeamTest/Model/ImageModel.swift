@@ -7,27 +7,58 @@
 //
 
 import Foundation
-import SwiftyJSON
 
-struct FlickrImage {
-    var bigImageURL: String
-    var smallImageURL: String
+struct FlickrData: Codable {
+    var photos: Photos?
+    var stat: String?
+}
+
+struct Photos: Codable {
+    var page, pages, total, perpage: Int?
+    var photo: [Photo]?
+}
+
+struct Photo: Codable {
+    //var widthZ: Int?
+    var urlZ: String?
+    //var secret: String?
+    //var isfamily: Int?
+    //var owner: String?
+    var urlQ: String?
+    //var ispublic: Int?
+    //var server: String?
+    //var heightZ, farm, isfriend: Int?
     var title: String
-    var downloadingDate: String
+    //var heightQ, widthQ: Int?
+    //var id: String?
+    var loadedDate: String
 
-    init?(json: JSON) {
-        guard let urlQ = json["url_q"].string,
-            let urlZ = json["url_z"].string,
-            let title = json["title"].string else { return nil }
+    init(from decoder: Decoder) throws {
+
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        
+        urlZ = try values.decodeIfPresent(String.self, forKey: .urlZ)
+        urlQ = try values.decodeIfPresent(String.self, forKey: .urlQ)
+        title = try values.decodeIfPresent(String.self, forKey: .title) ?? "untitled"
         
         let date = Date()
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         let dateString = dateFormatter.string(from: date)
-        
-        self.bigImageURL = urlZ
-        self.smallImageURL = urlQ
-        self.title = title
-        self.downloadingDate = dateString
+        loadedDate = dateString
+    }
+
+    enum CodingKeys: String, CodingKey {
+        //case widthZ = "width_z"
+        case urlZ = "url_z"
+        //case secret, isfamily, owner
+        case urlQ = "url_q"
+        //case ispublic, server
+        //case heightZ = "height_z"
+        //case farm, isfriend,
+        case title
+        //case heightQ = "height_q"
+        //case widthQ = "width_q"
+        //case id
     }
 }

@@ -9,13 +9,13 @@
 import UIKit
 
 protocol ChosenImageDelegate: class {
-    func sendChosenPhoto(_ image: UIImage,_ downloadingData: String)
+    func sendChosenPhoto(_ imageURL: String, _ downloadingData: String)
 }
 
 class InfinityScrollController: UICollectionViewController {
     
     private var getMoreImages = false
-    private var flickrImagesEntitys = [FlickrImage]()
+    private var flickrImagesEntitys = [FlickrPhotoRealm]()
     private let viewModel = InfinityScrollViewModel()
     
     override func viewDidLoad() {
@@ -57,7 +57,7 @@ extension InfinityScrollController {
 
             let image = flickrImagesEntitys[indexPath.row]
             cell.imageInfoLabel.text = image.title
-            cell.imageURL = image.smallImageURL
+            cell.imageURL = image.urlQ
 
             return cell
         } else {
@@ -91,11 +91,13 @@ extension InfinityScrollController {
 
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let imageEntity = flickrImagesEntitys[indexPath.row]
-        viewModel.loadImageFromURL(url: imageEntity.bigImageURL) { (image) in
+        if let imageURL = imageEntity.urlZ {
             let newVC = ChosenImageController()
             newVC.modalPresentationStyle = .fullScreen
-            newVC.sendChosenPhoto(image ?? UIImage(), imageEntity.downloadingDate)
+            newVC.sendChosenPhoto(imageURL, imageEntity.loadedDate)
             self.present(newVC, animated: true, completion: nil)
+        } else {
+            return
         }
     }
 }
