@@ -13,11 +13,11 @@ import RealmSwift
 
 class InfinityScrollViewModel {
     
-    var apiParameterPageNumber = 1
+    //var apiParameterPageNumber = 1
 
     let networking = NetworkManager()
     
-    var weConnected = true
+    var weConnected = false
 
     func getRandomImages(completion: @escaping (_ images: [FlickrPhotoRealm]?) -> ()) {
         
@@ -47,20 +47,12 @@ class InfinityScrollViewModel {
                 completion(flickrData)
             }
         } else {
-            let realm = try! Realm()
-            
-            func checkPageExist(page: Int) -> Bool {
-                return realm.object(ofType: FlickrAPIPage.self, forPrimaryKey: page) != nil
-            }
-            
-            if checkPageExist(page: self.apiParameterPageNumber - 1) {
+            networking.fetchRealm{ (flickrData) in
 
-                if let oldData = realm.object(ofType: FlickrAPIPage.self, forPrimaryKey: self.apiParameterPageNumber - 1) {
-                    
-                    let array = Array(oldData.flickrPhotos)
-                    completion(array)
-                }
-        }
+            //            let flickrImages = flickrData?.photos?.photo
+                        //let flickrImages = flickrData
+                            completion(flickrData)
+                        }
     }
 }
 }

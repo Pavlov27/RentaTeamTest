@@ -124,4 +124,30 @@ class NetworkManager {
         apiParameterPageNumber += 1
         API.parameters.updateValue("\(apiParameterPageNumber)", forKey: "page")
     }
+    
+    func fetchRealm(compeletion: @escaping (_ data: [FlickrPhotoRealm]?) -> ()) {
+    let realm = try! Realm()
+        //apiParameterPageNumber += 1
+        
+        func checkPageExist(page: Int) -> Bool {
+            return realm.object(ofType: FlickrAPIPage.self, forPrimaryKey: page) != nil
+        }
+        
+        if checkPageExist(page: self.apiParameterPageNumber) {
+
+            if let oldData = realm.object(ofType: FlickrAPIPage.self, forPrimaryKey: self.apiParameterPageNumber) {
+                
+                let array = Array(oldData.flickrPhotos)
+                compeletion(array)
+            }
+//            print("FETCH, \(apiParameterPageNumber)")
+//            apiParameterPageNumber += 1
+//            API.parameters.updateValue("\(apiParameterPageNumber)", forKey: "page")
+        } else {
+            return
+        }
+        print("FETCH, \(apiParameterPageNumber)")
+        apiParameterPageNumber += 1
+        API.parameters.updateValue("\(apiParameterPageNumber)", forKey: "page")
+    }
 }
