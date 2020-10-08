@@ -14,8 +14,8 @@
             filePath = "RentaTeamTest/Chosen Image Controller/ChosenImageController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "76"
-            endingLineNumber = "76"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
             landmarkName = "sendChosenPhoto(_:_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -98,6 +98,18 @@
             endingLineNumber = "88"
             landmarkName = "loadMoreFlickrImages()"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.ExceptionBreakpoint">
+         <BreakpointContent
+            uuid = "1626B63C-E95C-4D06-85B4-CD498D3F6E9E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            breakpointStackSelectionBehavior = "1"
+            scope = "1"
+            stopOnStyle = "0">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

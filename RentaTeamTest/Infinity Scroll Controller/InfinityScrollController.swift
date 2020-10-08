@@ -92,10 +92,14 @@ extension InfinityScrollController {
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let imageEntity = flickrImagesEntitys[indexPath.row]
         if let imageURL = imageEntity.urlZ {
-            let newVC = ChosenImageController()
-            newVC.modalPresentationStyle = .fullScreen
-            newVC.sendChosenPhoto(imageURL, imageEntity.loadedDate)
-            self.present(newVC, animated: true, completion: nil)
+            if #available(iOS 13.0, *) {
+                let newVC = ChosenImageController()
+                newVC.modalPresentationStyle = .fullScreen
+                newVC.sendChosenPhoto(imageURL, imageEntity.loadedDate)
+                self.present(newVC, animated: true, completion: nil)
+            } else {
+                // заменить кнопку .close на ChoseImageViewController и можно открывать исп. ios 10
+            }
         } else {
             return
         }

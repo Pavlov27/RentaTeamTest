@@ -8,51 +8,46 @@
 
 import UIKit
 import Network
-import RealmSwift
-//import SwiftyJSON
+import Alamofire
 
 class InfinityScrollViewModel {
-    
-    //var apiParameterPageNumber = 1
 
-    let networking = NetworkManager()
-    
-    var weConnected = false
+    private let networking = NetworkManager()
+    private var weConnected = true //Получить начальный статус?
 
     func getRandomImages(completion: @escaping (_ images: [FlickrPhotoRealm]?) -> ()) {
         
-        let monitor = NWPathMonitor()
-        
-        monitor.pathUpdateHandler = { path in
-            if path.status == .satisfied {
-                print("We're connected!")
-                self.weConnected = true
-            } else {
-                print("No connection.")
-                self.weConnected = false
-            }
-
-            
-            print(path.isExpensive)
-        }
-        
-        let queue = DispatchQueue(label: "Monitor")
-        monitor.start(queue: queue)
+        connectionStatus()
 
         if weConnected {
-            networking.fetchFlickrPhotos { (flickrData) in
-
-//            let flickrImages = flickrData?.photos?.photo
-            //let flickrImages = flickrData
+            networking.fetchFlickrPhotos() { (flickrData) in
                 completion(flickrData)
             }
-        } else {
-            networking.fetchRealm{ (flickrData) in
-
-            //            let flickrImages = flickrData?.photos?.photo
-                        //let flickrImages = flickrData
-                            completion(flickrData)
-                        }
+        } else { //если вызываю StorageManager отсюда - крэш
+            networking.fetchRealm(){ (flickrData) in
+                completion(flickrData)
+            }
+        }
     }
 }
+
+extension InfinityScrollViewModel {
+
+    private func connectionStatus(){
+        if #available(iOS 12.0, *) {
+            let monitor = NWPathMonitor()
+
+        monitor.pathUpdateHandler = { path in
+            if path.status == .satisfied {
+                //print("We're connected!")
+                self.weConnected = true
+            } else {
+                //print("No connection.")
+                self.weConnected = false
+            }
+        }
+        let queue = DispatchQueue(label: "Monitor")
+        monitor.start(queue: queue)
+    }
+    }
 }

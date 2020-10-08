@@ -8,7 +8,15 @@
 
 import Foundation
 
-struct API {
+class API {
+
+    static var apiParameterPageNumber = 1
+
+    static func apiPageUpdate(){
+        print("FETCH, \(apiParameterPageNumber)")
+        apiParameterPageNumber += 1
+        API.parameters.updateValue("\(apiParameterPageNumber)", forKey: "page")
+    }
     
     static let url = URL(string: "https://api.flickr.com/services/rest/") 
     

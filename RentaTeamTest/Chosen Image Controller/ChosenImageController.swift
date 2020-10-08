@@ -9,9 +9,10 @@
 import UIKit
 import Kingfisher
 
+@available(iOS 13.0, *)
 class ChosenImageController: UIViewController, ChosenImageDelegate {
 
-    private let closeButton = UIButton(type: .close)
+    private let closeButton = UIButton(type: .close) //заменить .close для ios 10
     private let imageInfoLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont(name: "Thonburi", size: 20.0)
